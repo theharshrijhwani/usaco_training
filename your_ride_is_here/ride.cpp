@@ -11,15 +11,15 @@ using namespace std;
 int helper(string word) {
   int sum = 1;
   for (char c : word) {
-    sum = sum * (c - 'A' + 1);
+    sum = sum * (c - 64);
   }
 
-  return sum % 27;
+  return sum % 47;
 }
 
 int main() {
-  ifstream cin("file.in");
-  ofstream cout("file.out");
+  ifstream cin("ride.in");
+  ofstream cout("ride.out");
 
   string comet, group;
   cin >> comet >> group;
